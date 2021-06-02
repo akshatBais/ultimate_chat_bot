@@ -2,9 +2,12 @@
 import * as dotenv from "dotenv";
 import express from "express";
 import {intentController} from "./src/controller/intentController";
+import { dbSetup } from './config/DBConfig';
 
 const app = express();
 dotenv.config();
+
+dbSetup();
 
 app.use(express.urlencoded({
     extended: true

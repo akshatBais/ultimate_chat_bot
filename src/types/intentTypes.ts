@@ -8,6 +8,8 @@ export interface IntentObject {
         name : string
 }
 
+
+
 export interface IntentResponse {
         data : {
                 intents? : IntentObject[],

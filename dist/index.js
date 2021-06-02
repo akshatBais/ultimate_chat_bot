@@ -25,8 +25,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 const express_1 = __importDefault(require("express"));
 const intentController_1 = require("./src/controller/intentController");
+const DBConfig_1 = require("./config/DBConfig");
 const app = express_1.default();
 dotenv.config();
+DBConfig_1.dbSetup();
 app.use(express_1.default.urlencoded({
     extended: true
 }));

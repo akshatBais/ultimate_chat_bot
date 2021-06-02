@@ -4,7 +4,9 @@
  */
 
 import axios from "axios";
-import { ChatResponse, InputMessage, IntentObject, IntentResponse } from "../../types/intentTypes";
+import { ChatResponse, InputMessage, IntentObject, IntentResponse } from "../types/intentTypes";
+import { getReplyForIntent } from '../dao/intentDao';
+import { IIntent } from "../models/intents.model";
 
 export const getIntent = async (messageData : InputMessage) => {
     const headers =  {
@@ -22,12 +24,15 @@ export const getIntent = async (messageData : InputMessage) => {
         if(response.status === 200 && response.data.intents) {
             
             //STEP 2 : Get the relevant intent based on confidence using our fUnction : getRelevantIntent()
-            const relevantIntent = getRelevantIntent(response.data.intents);
+            const relevantIntent : IntentObject | null = getRelevantIntent(response.data.intents);
 
             //STEP 3 : Make the DB Call and get the reply based on the relevant data found from STEP 2
-            
+            let intentReply;
+            if(relevantIntent)
+                intentReply = await getReplyForIntent(relevantIntent);
 
-
+            if(intentReply && intentReply.reply)
+                chatResponse.reply = intentReply.reply.text;
 
             return chatResponse;
 

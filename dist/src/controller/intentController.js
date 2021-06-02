@@ -25,6 +25,6 @@ exports.intentController = intentController;
  * sent by a user.
  */
 intentController.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    let result = yield intentService_1.getIntent(req.body);
-    res.send(result);
+    const result = yield intentService_1.getIntent(req.body);
+    res.status(result.status).send(result.reply);
 }));

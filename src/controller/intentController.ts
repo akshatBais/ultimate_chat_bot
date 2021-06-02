@@ -2,7 +2,7 @@
  * Following is the controller file for intent related APIs
  */
 import express, {Request, Response } from 'express';
-import { ChatResponse } from '../../types/intentTypes';
+import { ChatResponse } from '../types/intentTypes';
 import { getIntent } from '../service/intentService';
 
 const intentController = express.Router();
@@ -16,7 +16,7 @@ const intentController = express.Router();
 
 intentController.post('/', async (req : Request, res : Response) => {
     const result : ChatResponse = await getIntent(req.body);
-    res.send(result);
+    res.status(result.status).send(result.reply);
 });
 
 
