@@ -1,4 +1,4 @@
-import { IIntent, IMessage, Intent } from "../models/intents.model";
+import { Intent } from "../models/intents.model";
 import { IntentObject } from "../types/intentTypes";
 
 export async function getReplyForIntent(message : IntentObject) {

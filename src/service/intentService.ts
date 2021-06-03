@@ -6,7 +6,6 @@
 import axios from "axios";
 import { ChatResponse, InputMessage, IntentObject, IntentResponse } from "../types/intentTypes";
 import { getReplyForIntent } from '../dao/intentDao';
-import { IIntent } from "../models/intents.model";
 
 export const getIntent = async (messageData : InputMessage) => {
     const headers =  {
