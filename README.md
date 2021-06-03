@@ -12,3 +12,5 @@ For DB : Mongoose for MongoDB.
 To start project on your machine . I have provided the .env file which will be chosen by defult and help you with all configurations.
 
 Install nodejs on your machine and navigate to the folder and run : **npm start** . This will start the server at port : 3000 and your API is ready to take the messages. 
+
+### `npm start`
