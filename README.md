@@ -7,7 +7,7 @@ Based on the message put by the user . The API gets all intents which might be p
 Based on the relevant intent and maximum confidence we send a reply to the user.
 
 This project is built using [nodejs](https://nodejs.org/en/docs/) , [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-For DB : Mongoose for MongoDB.
+For DB : Mongoose for MongoDB(https://docs.mongodb.com/manual/).
 
 To start project on your machine . I have provided the .env file which will be chosen by defult and help you with all configurations.
 
@@ -15,7 +15,7 @@ Install nodejs on your machine and navigate to the folder and run : **npm start*
 
 ### `npm start`
 
-This will run your application on port 3000. Once the application starts on your local machine use : [localhost:3000/intents/]
+This will run your application on port 3000. Once the application starts on your local machine use : [localhost ][localhost:3000/intents/] . An example of what the api accepts as a request body : 
 
 ~~~
 {
@@ -26,7 +26,7 @@ This will run your application on port 3000. Once the application starts on your
 
 ### `npm test`
 
-This project uses jest as a testing library and running this command runs two test cases which checks if the user entered a chat message based on that what reply user should get. One is the default message "I could not give the correct answer" and other with the reply message using our db records. 
+This project uses [jest](https://jestjs.io/docs/getting-started) as a testing library and running this command runs two test cases which checks if the user entered a chat message based on that what reply user should get. One is the default message "I could not give the correct answer" and other with the reply message using our db records. 
 
 
 
