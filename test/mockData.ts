@@ -3,12 +3,17 @@ export const mockUserMessage = {
 	"message" : "hey"
 }
 
+export const mockUserMessageWrong = {
+	"botId" : "5f74865056d7bb000fcd39ff",
+	"message" : "sad"
+}
+
 export const expectedMessageReply = {
-    reply : 'asdasd',
+    reply : 'Hello :) How can I help you?',
     status : 200
 }
 
 export const expectedFailedReply = {
     reply: 'AI could not give the correct answer',
-    status: 500,
+    status: 200,
 }

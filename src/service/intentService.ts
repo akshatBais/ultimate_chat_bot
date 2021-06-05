@@ -18,10 +18,11 @@ export const getIntent = async (messageData : InputMessage) => {
     };
     try {
         //STEP 1 : Make the AI API call
-        let response : IntentResponse = await axios.post(process.env.CHAT_API + "/intents", messageData, { headers });
+        const url = process.env.CHAT_API + "/intents";
+        
+        let response : IntentResponse = await axios.post(url, messageData, { headers });
 
-        if(response.status === 200 && response.data.intents) {
-            
+        if(response && response.status === 200 && response.data.intents) {
             //STEP 2 : Get the relevant intent based on confidence using our fUnction : getRelevantIntent()
             const relevantIntent : IntentObject | null = getRelevantIntent(response.data.intents);
 
@@ -39,6 +40,7 @@ export const getIntent = async (messageData : InputMessage) => {
             return chatResponse;
         }
     } catch(error) {
+        console.error('error occurred while getting intent : ', error)
         chatResponse.status = 500;
         return chatResponse;
     }
