@@ -15,7 +15,7 @@ Install nodejs on your machine and navigate to the folder and run : **npm start*
 
 ### `npm start`
 
-This will run your application on port 3000. Once the application starts on your local machine use : localhost:3000/intents/ 
+This will run your application on port 3000. Once the application starts on your local machine use : [localhost:3000/intents/]
 
 ~~~
 {
