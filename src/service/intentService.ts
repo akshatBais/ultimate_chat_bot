@@ -37,6 +37,7 @@ export const getIntent = async (messageData : InputMessage) => {
             return chatResponse;
 
         } else {
+            chatResponse.status = response.status ? response.status : 200;
             return chatResponse;
         }
     } catch(error) {

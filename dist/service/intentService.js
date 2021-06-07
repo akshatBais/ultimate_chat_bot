@@ -30,8 +30,9 @@ const getIntent = (messageData) => __awaiter(void 0, void 0, void 0, function* (
     };
     try {
         //STEP 1 : Make the AI API call
-        let response = yield axios_1.default.post(process.env.CHAT_API + "/intents", messageData, { headers });
-        if (response.status === 200 && response.data.intents) {
+        const url = process.env.CHAT_API + "/intents";
+        const response = yield axios_1.default.post(url, messageData, { headers });
+        if (response && response.status === 200 && response.data.intents) {
             //STEP 2 : Get the relevant intent based on confidence using our fUnction : getRelevantIntent()
             const relevantIntent = getRelevantIntent(response.data.intents);
             //STEP 3 : Make the DB Call and get the reply based on the relevant data found from STEP 2

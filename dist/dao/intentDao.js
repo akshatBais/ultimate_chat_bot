@@ -14,7 +14,6 @@ const intents_model_1 = require("../models/intents.model");
 function getReplyForIntent(message) {
     return __awaiter(this, void 0, void 0, function* () {
         let intentReply = yield intents_model_1.Intent.findOne({ name: message.name });
-        console.log(intentReply);
         return intentReply;
     });
 }
