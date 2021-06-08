@@ -15,7 +15,7 @@ Install nodejs on your machine and navigate to the folder and run : **npm start*
 
 ### `npm start`
 
-This will run your application on port 3000. Once the application starts on your local machine use : [localhost ][localhost:3000/intents/] . An example of what the api accepts as a request body : 
+This will run your application on port 3000. Once the application starts on your local machine use : **localhost:3000/intents/** . An example of what the api accepts as a request body : 
 
 ~~~
 {
