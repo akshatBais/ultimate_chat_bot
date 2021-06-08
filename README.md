@@ -7,7 +7,7 @@ Based on the message put by the user . The API gets all intents which might be p
 Based on the relevant intent and maximum confidence we send a reply to the user.
 
 This project is built using [nodejs](https://nodejs.org/en/docs/) , [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-For DB : Mongoose for MongoDB(https://docs.mongodb.com/manual/).
+For DB : Mongoose for [MongoDB](https://docs.mongodb.com/manual/).
 
 To start project on your machine . I have provided the .env file which will be chosen by defult and help you with all configurations.
 
